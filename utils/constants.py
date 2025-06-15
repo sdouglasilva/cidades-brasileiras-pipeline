@@ -1,0 +1,1 @@
+BASE_URL = 'https://servicodados.ibge.gov.br/api/v1/localidades/municipios?spm=a2ty_o01.29997173.0.0.420bc921PeqpdL'
