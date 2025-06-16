@@ -2,10 +2,10 @@ import requests
 import logging
 from utils.constants import BASE_URL
 
-
 logger = logging.getLogger(__name__)
 
-def get_all_city_data(limit=10, offset=0):
+
+def get_all_cities_data(limit=10, offset=0)-> list :
         #tratamento da url para definir um limite de cidades por requisição - 
         request_url = f'{BASE_URL}?limit={limit}&offset={offset}'
         logger.info(f'Requisitando lista de cidades{request_url}')

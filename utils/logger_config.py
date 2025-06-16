@@ -1,5 +1,7 @@
-import logging
 import os
+import logging
+logger = logging.getLogger(__name__)
+
 
 def setup_logging():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
