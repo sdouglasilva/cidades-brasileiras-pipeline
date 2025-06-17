@@ -15,4 +15,4 @@ def transformation_data(data):
       "Área": random.randint(500, 10_000)
     }
     rows.append(row)
-    return rows
+  return rows

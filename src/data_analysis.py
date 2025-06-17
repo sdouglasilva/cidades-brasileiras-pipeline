@@ -8,6 +8,9 @@ def analize_city_data(rows):
     labels = ["Pequena", "Média", "Grande"]
     logger.info("Categorizando o porte")
     df["Porte"] = pd.cut(df["População"], bins=bins, labels=labels)
+    stats_by_region = df.groupby("Região").agg({
+        "População":"mean"
+    }).round(0).astype(int)
     logger.info("Dados analisados com sucesso!")
-
-    return df
+    return {"city_df":df,
+            "stats_by_region": stats_by_region}
