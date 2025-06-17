@@ -3,6 +3,7 @@ from utils.logger_config import setup_logging
 from .data_extraction import extract_all_city_data
 from .data_transformation import transformation_data
 from .data_analysis import analize_city_data
+from .data_reporting import generate_reports
 
 def main():
   logger = logging.getLogger(__name__)
@@ -13,6 +14,8 @@ def main():
   processed_data = transformation_data(cities_page)
   analysis_data = analize_city_data(processed_data)
   print(analysis_data)
+  generate_reports(analysis_data)
+
 
   
   # for index, city  in enumerate(cities_page):
